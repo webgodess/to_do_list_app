@@ -241,11 +241,9 @@
       const activeRoute =
         this._activeRoute.charAt(0).toUpperCase() + this._activeRoute.substr(1);
       this._updateCount();
-
       if (
         force ||
-        (this._lastActiveRoute !== "All" &&
-          this._lastActiveRoute !== activeRoute)
+        (this._lastActiveRoute !== " " && this._lastActiveRoute !== activeRoute)
       ) {
         this[`show${activeRoute}`]();
       }
