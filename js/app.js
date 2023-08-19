@@ -17,8 +17,18 @@
     }
   }
 
+  /**
+   * new instance of todo is set
+   * given the name todos-vanillajs
+   */
+
   const todo = new Todo("todos-vanillajs");
 
+  /**
+   * setView function sets the view depending on the url hash
+   * called in 2 instances
+   * when the window loads and when the hash changes
+   */
   const setView = () => {
     todo.controller.setView(document.location.hash);
   };
