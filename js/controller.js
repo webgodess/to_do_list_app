@@ -132,11 +132,11 @@
     /*
      * Cancels the item editing mode.
      */
-    editItemCancel = (id) => {
+    editItemCancel(id) {
       this.model.read(id, (data) => {
         this.view.render("editItemDone", { id: id, title: data[0].title });
       });
-    };
+    }
 
     /**
      * By giving it an ID it'll find the DOM element matching that ID,
