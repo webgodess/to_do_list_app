@@ -228,6 +228,7 @@
         this.view.render("toggleAll", {
           checked: todos.completed === todos.total,
         });
+
         this.view.render("contentBlockVisibility", {
           visible: todos.total > 0,
         });
