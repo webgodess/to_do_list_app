@@ -99,7 +99,7 @@
       };
 
       this.storage.findAll((data) => {
-        data.forEach((todo) => {
+        data.map((todo) => {
           if (todo.completed) {
             todos.completed++;
           } else {
