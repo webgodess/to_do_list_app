@@ -151,7 +151,7 @@
         items = data;
       });
 
-      items.forEach((item) => {
+      items.map((item) => {
         if (item.id === id) {
           console.log("Element with ID: " + id + " has been removed.");
         }
@@ -169,7 +169,7 @@
      */
     removeCompletedItems() {
       this.model.read({ completed: true }, (data) => {
-        data.forEach((item) => {
+        data.map((item) => {
           this.removeItem(item.id);
         });
       });
@@ -206,7 +206,7 @@
     toggleAll(completed) {
       this.model.read({ completed: !completed }, (data) => {
         data.map((item) => {
-          return this.toggleComplete(item.id, completed, true);
+          this.toggleComplete(item.id, completed, true);
         });
       });
 
