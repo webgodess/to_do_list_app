@@ -101,11 +101,7 @@
      * @returns {string} String containing the count
      */
     clearCompletedButton(completedTodos) {
-      if (completedTodos > 0) {
-        return "Clear completed";
-      } else {
-        return "";
-      }
+      return completedTodos > 0 ? "Clear completed" : "";
     }
   }
 
