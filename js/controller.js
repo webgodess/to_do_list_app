@@ -255,7 +255,6 @@
      * Simply updates the filter nav's selected states
      */
     _updateFilterState(currentPage) {
-      console.log(currentPage);
       this._activeRoute = currentPage || "All";
       this._filter();
       this.view.render("setFilter", currentPage);
