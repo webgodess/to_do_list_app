@@ -205,8 +205,8 @@
      */
     toggleAll(completed) {
       this.model.read({ completed: !completed }, (data) => {
-        data.forEach((item) => {
-          this.toggleComplete(item.id, completed, true);
+        data.map((item) => {
+          return this.toggleComplete(item.id, completed, true);
         });
       });
 
